@@ -4,13 +4,58 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="XamarinTrainicity.MainPage">
+             x:Class="XamarinTrainicity.Views.MainPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Image Source="trainicity.png" 
+                       Grid.Row="0" 
+                       Margin="20,100,20,0"
+                       VerticalOptions="FillAndExpand"
+                       HorizontalOptions="FillAndExpand"/>
+            
+            <Label Text="Welcome to Trainicity"
+                Grid.Row="1"  
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" 
+                FontSize="30"/>
+                <Label Text="If you are a beginner or complete newbie, with the help of this app you can create your own starting training plan."
+                   Margin="30"
+                Grid.Row="2"    
+                   TextColor="Black"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="Center"
+                       HorizontalTextAlignment="Center"
+                FontSize="Body"
+                       LineBreakMode="WordWrap"/>
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
-
+                <Button
+                Text="GET STARTED"
+                Clicked="Button_Clicked"
+                TextColor = "White"
+                Grid.Row="3"
+                HeightRequest="50" 
+                WidthRequest="180"
+                VerticalOptions="End"
+                HorizontalOptions="Center"
+                FontSize="Medium"
+                BackgroundColor="#C62F2F"
+                CornerRadius="25"
+                    Margin="40,40,40,5"/>
+                <Label Text="No registration needed."     
+                   TextColor="Black"
+                Grid.Row="4"  
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" 
+                FontSize="Body"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

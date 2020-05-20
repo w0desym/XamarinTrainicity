@@ -6,21 +6,44 @@
              mc:Ignorable="d"
              x:Class="XamarinTrainicity.Views.InfoPage"
              xmlns:dataForm="clr-namespace:Syncfusion.XForms.DataForm;assembly=Syncfusion.SfDataForm.XForms"
-             xmlns:local="clr-namespace:XamarinTrainicity.ViewModels">
+             xmlns:local="clr-namespace:XamarinTrainicity"
+             BackgroundColor="#FAFAFA">
 
     <ContentPage.BindingContext>
         <local:InfoPageViewModel/>
     </ContentPage.BindingContext>
+    <ContentPage.Behaviors>
+        <local:DataFormBehaviour/>
+    </ContentPage.Behaviors>
     <ContentPage.Content>
+        <ScrollView>
         <StackLayout>
-            <dataForm:SfDataForm 
+                <Label Text="Tell us about yourself"
+                       Margin="20,15,0,0"
+                       FontSize="24"/>
+                <dataForm:SfDataForm 
                 x:Name="dataForm"
                 DataObject="{Binding Info}"
+                LayoutOptions="TextInputLayout"
                 VerticalOptions="FillAndExpand"
-                HorizontalOptions="FillAndExpand"/>
+                HorizontalOptions="FillAndExpand"
+                />
             <Button
-                Text="CREATE A PLAN"
-                Clicked="Button_Clicked"/>
+                x:Name="createPlan"
+                Text="CREATE PLAN"
+                Clicked="Button_Clicked"
+                TextColor = "White"
+                Grid.Row="2"
+                HeightRequest="50" 
+                WidthRequest="180"
+                VerticalOptions="End"
+                HorizontalOptions="Center"
+                FontSize="Medium"
+                BackgroundColor="#C62F2F"
+                CornerRadius="25"
+                Margin="0,0,0,20"
+                IsEnabled="False"/>
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

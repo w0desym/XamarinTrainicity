@@ -14,6 +14,11 @@ namespace XamarinTrainicity
             InitializeComponent();
 
             MainPage = new NavigationPage(new MainPage());
+
+            NavigationPage.SetHasBackButton(Current.MainPage, false);
+
+            ((NavigationPage)Current.MainPage).BarBackgroundColor = Color.FromHex("#C62F2F");
+            ((NavigationPage)Current.MainPage).BarTextColor = Color.White;
         }
 
         protected override void OnStart()
