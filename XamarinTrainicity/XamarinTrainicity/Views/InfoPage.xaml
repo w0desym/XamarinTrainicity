@@ -24,6 +24,7 @@
                 <dataForm:SfDataForm 
                 x:Name="dataForm"
                 DataObject="{Binding Info}"
+                NotifyPropertyChanges="True"
                 LayoutOptions="TextInputLayout"
                 VerticalOptions="FillAndExpand"
                 HorizontalOptions="FillAndExpand"
