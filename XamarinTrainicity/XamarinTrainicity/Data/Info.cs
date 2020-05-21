@@ -118,7 +118,7 @@ namespace XamarinTrainicity.Data
         }
 
         [Required(AllowEmptyStrings = false, ErrorMessage = "Should not be empty.")]
-        [Display(Name = "Max pull-ups one set")]
+        [Display(Name  = "Max pull-ups one set")]
         [Range(0, 20, ErrorMessage = "Should be between 0 and 20.")]
         public int MaxPullUps
         {

@@ -8,9 +8,15 @@
 
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
+            <Button Text="TAKE MY PLAN"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                HorizontalOptions="CenterAndExpand"
+                HeightRequest="50" 
+                WidthRequest="180"
+                FontSize="Medium"
+                BackgroundColor="#C62F2F"
+                CornerRadius="25"
+                    Clicked="Button_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

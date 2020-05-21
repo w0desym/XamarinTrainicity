@@ -9,7 +9,6 @@ using Xamarin.Forms.Xaml;
 
 namespace XamarinTrainicity.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ProcessingPage : ContentPage
     {
         public ProcessingPage()

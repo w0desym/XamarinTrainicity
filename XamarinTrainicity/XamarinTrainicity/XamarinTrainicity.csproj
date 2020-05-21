@@ -11,6 +11,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\NewbieLowBodyMassIndex.pdf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\NewbieLowBodyMassIndex.pdf" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Syncfusion.Xamarin.SfDataForm" Version="18.1.0.53" />
     <PackageReference Include="Syncfusion.Xamarin.SfPdfViewer" Version="18.1.0.53" />
     <PackageReference Include="Xamarin.Forms" Version="4.4.0.991265" />
@@ -33,9 +41,5 @@
     <EmbeddedResource Update="Views\ProcessingPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Assets\" />
   </ItemGroup>
 </Project>

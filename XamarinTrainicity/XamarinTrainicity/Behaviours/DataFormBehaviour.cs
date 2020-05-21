@@ -14,18 +14,21 @@ namespace XamarinTrainicity
     {
         SfDataForm dataForm;
         Button button;
+        int bmi;
 
         protected override void OnAttachedTo(ContentPage bindable)
         {
             base.OnAttachedTo(bindable);
             dataForm = bindable.FindByName<SfDataForm>("dataForm");
-            dataForm.ValidationMode = ValidationMode.LostFocus;
+            dataForm.ValidationMode = ValidationMode.PropertyChanged;
             dataForm.CommitMode = CommitMode.LostFocus;
             //dataForm.SourceProvider = new SourceProviderExt();
             //dataForm.RegisterEditor("Goal", "DropDown");
             dataForm.RegisterEditor("MaxPushUps", "NumericUpDown");
             dataForm.RegisterEditor("MaxPullUps", "NumericUpDown");
             dataForm.RegisterEditor("MaxSquats", "NumericUpDown");
+            dataForm.RegisterEditor("Weight", "NumericUpDown");
+            dataForm.RegisterEditor("Height", "NumericUpDown");
             button = bindable.FindByName<Button>("createPlan");
             button.IsEnabled = false;
             dataForm.Validated += DataForm_Validated;
@@ -42,11 +45,10 @@ namespace XamarinTrainicity
         {
             int height = (dataForm.DataObject as Info).Height;
             int weight = (dataForm.DataObject as Info).Weight;
-            if (height != 0 && weight != 0)
+            if (height != 0 && weight != 0 && height > 99 && weight > 99)
             {
-                int bmi;
-                bmi = Convert.ToInt32(weight / Math.Pow((height / 100), 2));
-                if (bmi > 40 || bmi < 15)
+                bmi = Convert.ToInt32(weight / Math.Pow(height / 100.0, 2));
+                if (bmi > 40 ||  bmi < 15)
                 {
                     Application.Current.MainPage.DisplayAlert("Sorry to say that...", "You need to visit specialist, we can't help you :(", "OK");
                     (dataForm.DataObject as Info).Height = 0;
@@ -57,6 +59,13 @@ namespace XamarinTrainicity
 
         private void DataForm_AutoGeneratingDataFormItem(object sender, AutoGeneratingDataFormItemEventArgs e)
         {
+            if (e.DataFormItem != null)
+            {
+                e.DataFormItem.TextInputLayoutSettings = new TextInputLayoutSettings()
+                {
+                    OutlineCornerRadius = 25
+                };
+            }
             if (e.DataFormItem != null && e.DataFormItem.Name == "MaxPushUps")
             {
                 (e.DataFormItem as DataFormNumericUpDownItem).Maximum = 40;
@@ -75,17 +84,15 @@ namespace XamarinTrainicity
                 (e.DataFormItem as DataFormNumericUpDownItem).Minimum = 0;
                 (e.DataFormItem as DataFormNumericUpDownItem).AutoReverse = true;
             }
-            if (e.DataFormItem != null && e.DataFormItem.Name == "Age")
+            if (e.DataFormItem != null && e.DataFormItem.Name == "Weight")
             {
-                (dataForm.DataObject as Info).Age = 20;
+                (e.DataFormItem as DataFormNumericUpDownItem).Maximum = 150;
+                (e.DataFormItem as DataFormNumericUpDownItem).Minimum = 0;
             }
             if (e.DataFormItem != null && e.DataFormItem.Name == "Height")
             {
-                (dataForm.DataObject as Info).Height = 175;
-            }
-            if (e.DataFormItem != null && e.DataFormItem.Name == "Weight")
-            {
-                (dataForm.DataObject as Info).Weight = 70;
+                (e.DataFormItem as DataFormNumericUpDownItem).Maximum = 220;
+                (e.DataFormItem as DataFormNumericUpDownItem).Minimum = 0;
             }
         }
     }

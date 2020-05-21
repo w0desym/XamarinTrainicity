@@ -24,24 +24,23 @@ namespace XamarinTrainicity.Modules
             this.maxPushUps = maxPushUps;
             this.maxSquats = maxSquats;
             this.maxPullUps = maxPullUps;
-        }
-
-        public ProgramSelector()
-        {
             bmi = CalculateBmi(this.height, this.weight);
             level = CalculateLevel(this.maxPushUps, this.maxSquats, this.maxPullUps);
         }
 
+        public ProgramSelector()
+        {
+
+        }
+
         public int CalculateBmi(int height, int weight)
         {
-            int bmi;
-            bmi = Convert.ToInt32(weight / Math.Pow((height / 100), 2));
+            bmi = Convert.ToInt32(weight / Math.Pow(height / 100.0, 2));
             return bmi;
         }
 
         public int CalculateLevel(int maxPushUps, int maxSquats, int maxPullUps)
         {
-            int level;
             level = (maxPushUps + maxSquats + maxPullUps) / 3;
             return level;
         }

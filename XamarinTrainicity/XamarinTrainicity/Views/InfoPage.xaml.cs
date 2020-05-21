@@ -12,7 +12,6 @@ using XamarinTrainicity.Modules;
 
 namespace XamarinTrainicity.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class InfoPage : ContentPage
     {
         public InfoPage()
@@ -30,9 +29,7 @@ namespace XamarinTrainicity.Views
             var maxSquats = (dataForm.DataObject as Info).MaxSquats;
             var maxPullUps = (dataForm.DataObject as Info).MaxPullUps;
 
-            ProgramSelector programSelector = new ProgramSelector(weight, height, maxPushUps, maxSquats, maxPullUps);
-
-            await Navigation.PushModalAsync(new FinishingPage());
+            await Navigation.PushModalAsync(new FinishingPage(weight, height, maxPushUps, maxSquats, maxPullUps));
         }
 
     }

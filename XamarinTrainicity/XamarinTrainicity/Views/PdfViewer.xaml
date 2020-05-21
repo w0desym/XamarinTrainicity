@@ -8,15 +8,5 @@
              xmlns:local="clr-namespace:XamarinTrainicity"
              xmlns:syncfusion="clr-namespace:Syncfusion.SfPdfViewer.XForms;assembly=Syncfusion.SfPdfViewer.XForms">
 
-    <ContentPage.BindingContext>
-        <local:PdfViewerViewModel/>
-    </ContentPage.BindingContext>
-
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    <syncfusion:SfPdfViewer x:Name="pdfViewerControl" ></syncfusion:SfPdfViewer>
 </ContentPage>
