@@ -93,7 +93,7 @@ namespace XamarinTrainicity.Data
 
         [Required(AllowEmptyStrings = false, ErrorMessage = "Should not be empty.")]
         [Display(Name = "Max push-ups one set")]
-        [Range(0, 50, ErrorMessage = "Should be between 0 and 50.")]
+        [Range(0, 60, ErrorMessage = "Should be between 0 and 60.")]
         public int MaxPushUps
         {
             get { return this.maxPushUps; }

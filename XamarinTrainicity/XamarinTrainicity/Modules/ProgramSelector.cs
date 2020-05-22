@@ -49,7 +49,7 @@ namespace XamarinTrainicity.Modules
         {
             if (bmi < 18)
             {
-                if (level < 28)
+                if (level < 30)
                 {
                     return 1;
                 }
@@ -60,7 +60,7 @@ namespace XamarinTrainicity.Modules
             }
             else if (bmi < 27)
             {
-                if (level < 28)
+                if (level < 30)
                 {
                     return 3;
                 }
@@ -71,7 +71,7 @@ namespace XamarinTrainicity.Modules
             }
             else
             {
-                if (level < 28)
+                if (level < 30)
                 {
                     return 5;
                 }

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XamarinTrainicity.Views.ThankPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="trainicity.png" 
+                       Grid.Row="0" 
+                       Margin="20,100,20,0"
+                       VerticalOptions="FillAndExpand"
+                       HorizontalOptions="FillAndExpand"/>
+            <Label Text="If you want to thank an author, please rate this app with five stars in Google Play" 
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand" 
+                   HorizontalTextAlignment="Center"
+                   FontSize="20"
+                   Margin="40,0"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

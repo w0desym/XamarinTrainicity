@@ -68,7 +68,7 @@ namespace XamarinTrainicity
             }
             if (e.DataFormItem != null && e.DataFormItem.Name == "MaxPushUps")
             {
-                (e.DataFormItem as DataFormNumericUpDownItem).Maximum = 40;
+                (e.DataFormItem as DataFormNumericUpDownItem).Maximum = 60;
                 (e.DataFormItem as DataFormNumericUpDownItem).Minimum = 0;
                 (e.DataFormItem as DataFormNumericUpDownItem).AutoReverse = true;
             }

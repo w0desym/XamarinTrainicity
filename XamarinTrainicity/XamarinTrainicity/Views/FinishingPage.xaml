@@ -8,14 +8,39 @@
 
     <ContentPage.Content>
         <StackLayout>
-            <Button Text="TAKE MY PLAN"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand"
-                HeightRequest="50" 
-                WidthRequest="180"
-                FontSize="Medium"
-                BackgroundColor="#C62F2F"
-                CornerRadius="25"
+            
+            <Label Text="Now 3 more steps" 
+                       VerticalOptions="CenterAndExpand" 
+                       HorizontalOptions="CenterAndExpand" 
+                       FontSize="30"/>
+
+            <Label Text="1. Click Open to open your plan via default PDF viewer" 
+                       VerticalOptions="CenterAndExpand" 
+                       HorizontalOptions="CenterAndExpand" 
+                   HorizontalTextAlignment="Center"
+                       FontSize="20"
+                   Margin="40,0"/>
+            <Label Text="2. Save it to appropriate location" 
+                       VerticalOptions="CenterAndExpand" 
+                       HorizontalOptions="CenterAndExpand"
+                   HorizontalTextAlignment="Center"
+                       FontSize="20"
+                   Margin="40,0"/>
+            <Label Text="3. Print if needed" 
+                       VerticalOptions="CenterAndExpand" 
+                       HorizontalOptions="CenterAndExpand"
+                   HorizontalTextAlignment="Center"
+                       FontSize="20"
+                   Margin="40,0"/>
+            <Button Text="OPEN"
+                    TextColor="White"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand"
+                    HeightRequest="50" 
+                    WidthRequest="100"
+                    FontSize="Medium"
+                    BackgroundColor="#C62F2F"
+                    CornerRadius="25"
                     Clicked="Button_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
