@@ -16,45 +16,41 @@
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
                 <Image Source="trainicity.png" 
-                       Grid.Row="0" 
-                       Margin="20,100,20,0"
-                       VerticalOptions="FillAndExpand"
-                       HorizontalOptions="FillAndExpand"/>
-            
-            <Label Text="Welcome to Trainicity"
-                Grid.Row="1"  
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" 
-                FontSize="30"/>
-                <Label Text="If you are a beginner or complete newbie, with the help of this app you can find starting training plan."
-                   Margin="30"
-                Grid.Row="2"    
-                   TextColor="Black"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="Center"
-                       HorizontalTextAlignment="Center"
-                FontSize="Body"
-                       LineBreakMode="WordWrap"/>
-
-                <Button
-                Text="GET STARTED"
-                Clicked="Button_Clicked"
-                TextColor = "White"
-                Grid.Row="3"
-                HeightRequest="50" 
-                WidthRequest="180"
-                VerticalOptions="End"
-                HorizontalOptions="Center"
-                FontSize="Medium"
-                BackgroundColor="#C62F2F"
-                CornerRadius="25"
+                    Grid.Row="0" 
+                    Margin="20,80,20,20"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"/>
+                <Label Text="Welcome to Trainicity"
+                    Grid.Row="1"  
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand" 
+                    FontSize="30"/>
+                <Label Text="If you are a beginner or complete novice, this app might help you with starting training plan."
+                    Margin="30"
+                    Grid.Row="2"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    FontSize="20"
+                    LineBreakMode="WordWrap"/>
+                <Button Text="GET STARTED"
+                    Clicked="Button_Clicked"
+                    TextColor = "White"
+                    Grid.Row="3"
+                    HeightRequest="50" 
+                    WidthRequest="180"
+                    VerticalOptions="End"
+                    HorizontalOptions="Center"
+                    FontSize="Medium"
+                    BackgroundColor="#C62F2F"
+                    CornerRadius="25"
                     Margin="40,40,40,5"/>
                 <Label Text="No registration needed."     
-                   TextColor="Black"
-                Grid.Row="4"  
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" 
-                FontSize="Body"/>
+                    TextColor="Black"
+                    Grid.Row="4"  
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand" 
+                    FontSize="Body"/>
             </Grid>
         </StackLayout>
     </ContentPage.Content>

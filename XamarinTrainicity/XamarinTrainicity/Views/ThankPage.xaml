@@ -12,12 +12,12 @@
                        Margin="20,100,20,0"
                        VerticalOptions="FillAndExpand"
                        HorizontalOptions="FillAndExpand"/>
-            <Label Text="If you want to thank an author, please rate this app with five stars in Google Play" 
-                   VerticalOptions="CenterAndExpand" 
+            <Label Text="If you want to support this app, please give it a rate in Google Play. Thank you." 
+                   VerticalOptions="EndAndExpand" 
                    HorizontalOptions="CenterAndExpand" 
                    HorizontalTextAlignment="Center"
                    FontSize="20"
-                   Margin="40,0"/>
+                   Margin="40"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
