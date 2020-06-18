@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Reflection;
-using System.Text;
-using Xamarin.Forms.PlatformConfiguration.TizenSpecific;
-using Xamarin.Forms.Xaml.Internals;
 
 namespace XamarinTrainicity.Modules
 {
@@ -15,7 +10,7 @@ namespace XamarinTrainicity.Modules
         int maxSquats;
         int maxPullUps;
         int bmi;
-        int level;
+        double level;
 
         public ProgramSelector(int weight, int height, int maxPushUps, int maxSquats, int maxPullUps)
         {
@@ -39,17 +34,17 @@ namespace XamarinTrainicity.Modules
             return bmi;
         }
 
-        public int CalculateLevel(int maxPushUps, int maxSquats, int maxPullUps)
+        public double CalculateLevel(int maxPushUps, int maxSquats, int maxPullUps)
         {
-            level = (maxPushUps + maxSquats + maxPullUps) / 3;
+            level = (0.85 * maxPushUps + 0.25 * maxSquats + 2.5 * maxPullUps) / 3;
             return level;
         }
 
         public int SelectProgram()
         {
-            if (bmi < 18)
+            if (bmi < 19)
             {
-                if (level < 30)
+                if (level < 25)
                 {
                     return 1;
                 }
@@ -60,8 +55,8 @@ namespace XamarinTrainicity.Modules
             }
             else if (bmi < 27)
             {
-                if (level < 30)
-                {
+                if (level < 25)
+                { 
                     return 3;
                 }
                 else
@@ -71,7 +66,7 @@ namespace XamarinTrainicity.Modules
             }
             else
             {
-                if (level < 30)
+                if (level < 25)
                 {
                     return 5;
                 }

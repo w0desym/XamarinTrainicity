@@ -11,13 +11,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\BeginnerHighBMI.pdf" />
+    <None Remove="Assets\BeginnerLowBMI.pdf" />
+    <None Remove="Assets\BeginnerNormalBMI.pdf" />
+    <None Remove="Assets\NewbieHighBMI.pdf" />
+    <None Remove="Assets\NewbieLowBMI.pdf" />
     <None Remove="Assets\NewbieLowBodyMassIndex.pdf" />
+    <None Remove="Assets\NewbieNormalBMI.pdf" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Assets\NewbieLowBodyMassIndex.pdf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\BeginnerHighBMI.pdf" />
+    <EmbeddedResource Include="Assets\BeginnerLowBMI.pdf" />
+    <EmbeddedResource Include="Assets\BeginnerNormalBMI.pdf" />
+    <EmbeddedResource Include="Assets\NewbieHighBMI.pdf" />
+    <EmbeddedResource Include="Assets\NewbieLowBMI.pdf" />
+    <EmbeddedResource Include="Assets\NewbieNormalBMI.pdf" />
   </ItemGroup>
 
   <ItemGroup>

@@ -8,29 +8,27 @@
 
     <ContentPage.Content>
         <StackLayout>
-            
             <Label Text="Now 3 more steps" 
-                       VerticalOptions="CenterAndExpand" 
-                       HorizontalOptions="CenterAndExpand" 
-                       FontSize="30"/>
-
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand" 
+                   FontSize="30"/>
             <Label Text="1. Click Open to open your plan via default PDF viewer" 
-                       VerticalOptions="CenterAndExpand" 
-                       HorizontalOptions="CenterAndExpand" 
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand" 
                    HorizontalTextAlignment="Center"
-                       FontSize="20"
+                   FontSize="20"
                    Margin="40,0"/>
             <Label Text="2. Save it to appropriate location" 
-                       VerticalOptions="CenterAndExpand" 
-                       HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand"
                    HorizontalTextAlignment="Center"
-                       FontSize="20"
+                   FontSize="20"
                    Margin="40,0"/>
             <Label Text="3. Print if needed" 
-                       VerticalOptions="CenterAndExpand" 
-                       HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand"
                    HorizontalTextAlignment="Center"
-                       FontSize="20"
+                   FontSize="20"
                    Margin="40,0"/>
             <Button Text="OPEN"
                     TextColor="White"

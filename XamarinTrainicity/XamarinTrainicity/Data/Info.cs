@@ -1,12 +1,6 @@
 ﻿using System;
-using Syncfusion.XForms.DataForm;
-using System.ComponentModel.DataAnnotations;
-using System.Collections.Generic;
-using System.Text;
 using System.ComponentModel;
-using Xamarin.Essentials;
-using System.Collections;
-using Xamarin.Forms.PlatformConfiguration.TizenSpecific;
+using System.ComponentModel.DataAnnotations;
 
 namespace XamarinTrainicity.Data
 {
@@ -21,7 +15,6 @@ namespace XamarinTrainicity.Data
         private int maxPushUps;
         private int maxSquats;
         private int maxPullUps;
-        //private string goal;
 
         #endregion
 
@@ -37,7 +30,6 @@ namespace XamarinTrainicity.Data
         #region Properties
 
         [Required(AllowEmptyStrings = false, ErrorMessage = "Should not be empty.")]
-        //[DisplayOptions(ValidMessage = "All good.")]
         [StringLength(15, ErrorMessage = "Name should not exceed 15 characters")]
         [Display(Name = "Name")]
         [MinLength(4, ErrorMessage = "Name should be longer")]
@@ -52,16 +44,15 @@ namespace XamarinTrainicity.Data
         }
 
         [Required(AllowEmptyStrings = false, ErrorMessage = "Should not be empty.")]
-        //[DisplayOptions(ValidMessage = "All good.")]
         [Display(Name = "Age")]
-        [Range(15, 40, ErrorMessage = "This app is for people from 15 to 40 years old.")]
+        [Range(16, 40, ErrorMessage = "This app is for people from 16 to 40 years old.")]
         public int Age
         {
             get { return this.age; }
             set 
             { 
                 this.age = value;
-                this.RaisePropertyChanged("BirthDate");
+                this.RaisePropertyChanged("Age");
             }
         }
 
@@ -106,7 +97,7 @@ namespace XamarinTrainicity.Data
 
         [Required(AllowEmptyStrings = false, ErrorMessage = "Should not be empty")]
         [Display(Name = "Max squats one set")]
-        [Range(0, 100, ErrorMessage = "Should be between 0 and 100.")]
+        [Range(0, 200, ErrorMessage = "Should be between 0 and 200.")]
         public int MaxSquats
         {
             get { return this.maxSquats; }
@@ -136,34 +127,7 @@ namespace XamarinTrainicity.Data
             if (PropertyChanged != null)
                 this.PropertyChanged(this, new PropertyChangedEventArgs(Name));
         }
-        //[Display(Name = "Goal")]
-        //public string Goal
-        //{
-        //    get { return this.goal; }
-        //    set { this.goal = value; }
-        //}
-
-        //public class SourceProviderExt : SourceProvider
-        //{
-        //    public override IList GetSource(string sourceName)
-        //    {
-        //        var list = new List<string>();
-        //        if (sourceName == "Goal")
-        //        {
-        //            list.Add("Fit");
-        //            list.Add("Strength");
-        //            list.Add("Fit&Strength");
-        //        }
-        //        return list;
-        //     }
-        //}
 
         #endregion
-
-        public void CalculateBmi()
-        {
-            int bmi;
-            bmi = Convert.ToInt32(weight / Math.Pow((height / 100), 2));
-        }
     }
 }

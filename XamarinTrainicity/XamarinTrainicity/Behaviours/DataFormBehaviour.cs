@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Syncfusion.XForms.DataForm;
-using Syncfusion.XForms.DataForm.Editors;
+﻿using Syncfusion.XForms.DataForm;
+using System;
 using Xamarin.Forms;
 using XamarinTrainicity.Data;
-using static XamarinTrainicity.Data.Info;
 
 namespace XamarinTrainicity
 {
@@ -45,10 +40,10 @@ namespace XamarinTrainicity
         {
             int height = (dataForm.DataObject as Info).Height;
             int weight = (dataForm.DataObject as Info).Weight;
-            if (height != 0 && weight != 0 && height > 99 && weight > 99)
+            if (height >= 140 && weight >= 40)
             {
                 bmi = Convert.ToInt32(weight / Math.Pow(height / 100.0, 2));
-                if (bmi > 40 ||  bmi < 15)
+                if (bmi > 40 ||  bmi < 16)
                 {
                     Application.Current.MainPage.DisplayAlert("Sorry to say that...", "You need to visit specialist, we can't help you :(", "OK");
                     (dataForm.DataObject as Info).Height = 0;
@@ -74,7 +69,7 @@ namespace XamarinTrainicity
             }
             if (e.DataFormItem != null && e.DataFormItem.Name == "MaxSquats")
             {
-                (e.DataFormItem as DataFormNumericUpDownItem).Maximum = 100;
+                (e.DataFormItem as DataFormNumericUpDownItem).Maximum = 200;
                 (e.DataFormItem as DataFormNumericUpDownItem).Minimum = 0;
                 (e.DataFormItem as DataFormNumericUpDownItem).AutoReverse = true;
             }

@@ -1,15 +1,8 @@
 ﻿using Syncfusion.Pdf.Parsing;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Reflection;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 using XamarinTrainicity.Modules;
 
 namespace XamarinTrainicity.Views
@@ -21,10 +14,12 @@ namespace XamarinTrainicity.Views
         string fileName;
         string path;
         Stream fileStream;
+
         public FinishingPage()
         {
                
         }
+
         public FinishingPage(string name, int weight, int height, int maxPushUps, int maxSquats, int maxPullUps)
         {
             InitializeComponent();
@@ -33,24 +28,23 @@ namespace XamarinTrainicity.Views
             switch (program)
             {
                 case 1:
-                    fileName = "NewbieLowBodyMassIndex.pdf";
+                    fileName = "NewbieLowBMI.pdf";
                     break;
                 case 2:
-                    fileName = "NewbieLowBodyMassIndex.pdf";
+                    fileName = "BeginnerLowBMI.pdf";
                     break;
                 case 3:
-                    fileName = "NewbieLowBodyMassIndex.pdf";
+                    fileName = "NewbieNormalBMI.pdf";
                     break;
                 case 4:
-                    fileName = "NewbieLowBodyMassIndex.pdf";
+                    fileName = "BeginnerNormalBMI.pdf";
                     break;
                 case 5:
-                    fileName = "NewbieLowBodyMassIndex.pdf";
+                    fileName = "NewbieHighBMI.pdf";
                     break;
                 case 6:
-                    fileName = "NewbieLowBodyMassIndex.pdf";
+                    fileName = "BeginnerHighBMI.pdf";
                     break;
-
             }
             path = String.Concat("XamarinTrainicity.Assets.", fileName);
             this.name = String.Concat(name, ".pdf");
@@ -58,7 +52,6 @@ namespace XamarinTrainicity.Views
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            //await Navigation.PushModalAsync(new PdfViewer(fileName));
             fileStream = typeof(App).GetTypeInfo().Assembly.GetManifestResourceStream(path);
             PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileStream);
             MemoryStream stream = new MemoryStream();

@@ -1,14 +1,13 @@
-﻿using System;
-using System.IO;
-using XamarinTrainicity.Droid;
+﻿using Android;
 using Android.Content;
-using Java.IO;
-using Xamarin.Forms;
-using System.Threading.Tasks;
-using Android.Support.V4.Content;
-using Android;
 using Android.Content.PM;
 using Android.Support.V4.App;
+using Android.Support.V4.Content;
+using Java.IO;
+using System;
+using System.IO;
+using System.Threading.Tasks;
+using Xamarin.Forms;
 
 [assembly: Dependency(typeof(SaveAndroid))]
 

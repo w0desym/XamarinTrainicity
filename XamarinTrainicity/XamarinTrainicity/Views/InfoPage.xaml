@@ -18,10 +18,10 @@
     <ContentPage.Content>
         <ScrollView>
         <StackLayout>
-                <Label Text="Tell us about yourself"
-                       Margin="20,15,0,0"
-                       FontSize="24"/>
-                <dataForm:SfDataForm 
+            <Label Text="Tell us about yourself"
+                Margin="20,15,0,0"
+                FontSize="24"/>
+            <dataForm:SfDataForm 
                 x:Name="dataForm"
                 DataObject="{Binding Info}"
                 NotifyPropertyChanges="True"
